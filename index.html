@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Environmental Solutions - Building Saudi Arabia's Sustainable Future</title>
+    <meta name="description" content="Intelligent environmental management solutions for sustainable cities, aligned with Saudi Vision 2030">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Colors from SES Logo */
+            --primary-dark: #1e3a52;
+            --primary-cyan: #5bc0de;
+            --white: #ffffff;
+            --light-bg: #f8f9fa;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-img {
+            height: 70px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-cyan);
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .lang-switcher {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--white);
+            background: transparent;
+            color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-switcher:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+        
+        .btn-primary {
+            padding: 0.75rem 2rem;
+            background: var(--primary-cyan);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(91, 192, 222, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 58, 82, 0.85) 0%, rgba(30, 58, 82, 0.7) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            padding: 0 2rem;
+            text-align: center;
+            color: var(--white);
+            z-index: 1;
+        }
+        
+        .hero-tag {
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-cyan);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.95;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            padding: 0.75rem 2rem;
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+        }
+        
+        /* Vision 2030 Banner */
+        .vision-banner {
+            background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-dark) 100%);
+            padding: 2rem;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .vision-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .vision-icon {
+            font-size: 3rem;
+        }
+        
+        .vision-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .vision-text p {
+            opacity: 0.9;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+        }
+        
+        .section-light {
+            background: var(--white);
+        }
+        
+        .section-gray {
+            background: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-cyan);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Value Proposition */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .value-item {
+            text-align: center;
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+        }
+        
+        .value-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .value-item p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Sectors Grid */
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .sector-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-cyan);
+        }
+        
+        .sector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .sector-icon {
+            font-size: 2.5rem;
+            color: var(--primary-cyan);
+            margin-bottom: 1.5rem;
+        }
+        
+        .sector-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .sector-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sector-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sector-card li {
+            padding: 0.5rem 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sector-card li i {
+            color: var(--primary-cyan);
+        }
+        
+        /* Core Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .value-card-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+        
+        .value-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Statistics */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary-cyan);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Differentiators */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .diff-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .diff-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-cyan), var(--primary-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .diff-content h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .diff-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        
+        /* Contact Form */
+        .contact-section {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-section .section-title {
+            color: var(--white);
+        }
+        
+        .contact-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .contact-form {
+            margin-top: 3rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-cyan);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .btn-submit {
+            padding: 1rem 3rem;
+            background: var(--primary-cyan);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-submit:hover {
+            background: var(--white);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(91, 192, 222, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f1f2e;
+            color: rgba(255,255,255,0.8);
+            padding: 4rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-col p,
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col a:hover {
+            color: var(--primary-cyan);
+        }
+        
+        .footer-logo {
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-cyan);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="assets/images/ses-logo.png" alt="SES Logo" class="logo-img">
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sectors">Sectors</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="lang-switcher">العربية</button>
+                <a href="#contact" class="btn-primary">Request Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="assets/images/riyadh-aerial-hero.jpg" alt="Riyadh Cityscape" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <div class="hero-tag">Environmental Compliance & Circular Economy</div>
+            <h1 class="hero-title">Building Saudi Arabia's<br>Sustainable Future</h1>
+            <p class="hero-subtitle">Intelligent solutions for environmental management, waste optimization, and circular economy—aligned with Vision 2030</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn-primary">Request a Demo</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision 2030 Banner -->
+    <div class="vision-banner">
+        <div class="vision-content">
+            <div class="vision-icon">
+                <i class="fas fa-flag"></i>
+            </div>
+            <div class="vision-text">
+                <h3>Aligned with Saudi Vision 2030</h3>
+                <p>Supporting the Kingdom's transformation through intelligent technology for sustainable urban development and environmental protection</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Value Proposition -->
+    <section id="about" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">What We Offer</div>
+                <h2 class="section-title">Complete Environmental Management<br>for One Site or Thousands</h2>
+                <p class="section-subtitle">Integrated technology platform connecting governments, businesses, and communities in transparent, efficient environmental ecosystems</p>
+            </div>
+            
+            <div class="value-props">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Integrated Platform</h3>
+                    <p>Complete ecosystem from waste collection to circular economy intelligence, seamlessly connected</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Complete Visibility</h3>
+                    <p>Real-time tracking, monitoring, and analytics across all environmental operations</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Full Compliance</h3>
+                    <p>100% regulatory alignment with automated audit trails and transparent reporting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors We Serve -->
+    <section id="sectors" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Sectors We Serve</div>
+                <h2 class="section-title">Solutions for Every Stakeholder</h2>
+                <p class="section-subtitle">Tailored environmental management solutions for diverse sectors across the Kingdom</p>
+            </div>
+            
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Government & Municipalities</h3>
+                    <p>Transform environmental compliance into strategic advantage</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Regulatory oversight & reporting</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time compliance monitoring</li>
+                        <li><i class="fas fa-check-circle"></i> Data-driven policy making</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent accountability</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Contractors & Developers</h3>
+                    <p>Navigate compliance with confidence and efficiency</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Simplified permit processes</li>
+                        <li><i class="fas fa-check-circle"></i> Automated compliance tracking</li>
+                        <li><i class="fas fa-check-circle"></i> Project management tools</li>
+                        <li><i class="fas fa-check-circle"></i> Cost optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Service Companies</h3>
+                    <p>Optimize operations and win more business</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Fleet management & GPS tracking</li>
+                        <li><i class="fas fa-check-circle"></i> Route optimization</li>
+                        <li><i class="fas fa-check-circle"></i> Automated scheduling</li>
+                        <li><i class="fas fa-check-circle"></i> Performance analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Waste Management Facilities</h3>
+                    <p>Streamline operations and maximize efficiency</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Automated tracking & verification</li>
+                        <li><i class="fas fa-check-circle"></i> Material classification</li>
+                        <li><i class="fas fa-check-circle"></i> Capacity management</li>
+                        <li><i class="fas fa-check-circle"></i> Compliance documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Circular Economy Partners</h3>
+                    <p>Enable sustainable material recovery and reuse</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Recycling marketplace</li>
+                        <li><i class="fas fa-check-circle"></i> Material matching</li>
+                        <li><i class="fas fa-check-circle"></i> Quality tracking</li>
+                        <li><i class="fas fa-check-circle"></i> Supply chain integration</li>
+                    </ul>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Communities</h3>
+                    <p>Build cleaner, safer, more sustainable cities</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Transparent operations</li>
+                        <li><i class="fas fa-check-circle"></i> Environmental education</li>
+                        <li><i class="fas fa-check-circle"></i> Community engagement</li>
+                        <li><i class="fas fa-check-circle"></i> Sustainability reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Our Core Values</div>
+                <h2 class="section-title">Guiding Principles for Sustainable Cities</h2>
+                <p class="section-subtitle">Values that drive our mission to build a sustainable future for Saudi Arabia</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation First</h3>
+                    <p>Leading with cutting-edge technology and creative solutions to environmental challenges</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Environmental Stewardship</h3>
+                    <p>Protecting the planet through sustainable practices and circular economy principles</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Transparency & Accountability</h3>
+                    <p>Open, auditable systems that build trust and ensure compliance</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnership</h3>
+                    <p>Working collaboratively with governments, businesses, and communities</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Impact-Driven Excellence</h3>
+                    <p>Measuring success by tangible environmental and social outcomes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Statistics -->
+    <section id="impact" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Measurable Impact</div>
+                <h2 class="section-title">Quantifiable Results for Stakeholders</h2>
+                <p class="section-subtitle">Real outcomes driving environmental transformation across Saudi Arabia</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Reduction in Violations</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Faster Permit Processing</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Efficiency Improvement</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Audit Trail Compliance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Why Choose SES</div>
+                <h2 class="section-title">What Makes Us Different</h2>
+                <p class="section-subtitle">Purpose-built for Saudi Arabia's environmental challenges and Vision 2030 goals</p>
+            </div>
+            
+            <div class="diff-grid">
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Regulatory-First Design</h3>
+                        <p>Built from the ground up to meet Saudi environmental regulations and Balady platform integration requirements</p>
+                    </div>
+                </div>
+                
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Complete Ecosystem</h3>
+                        <p>End-to-end solution from waste collection to circular economy intelligence, not just point solutions</p>
+                    </div>
+                </div>
+                
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Emerging Market Expertise</h3>
+                        <p>Deep understanding of Gulf region challenges, regulations, and cultural context</p>
+                    </div>
+                </div>
+                
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Multi-Stakeholder Platform</h3>
+                        <p>Connects all ecosystem participants—government, contractors, service providers, facilities, and communities</p>
+                    </div>
+                </div>
+                
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Measurable Impact</h3>
+                        <p>Data-driven approach with clear KPIs and transparent reporting on environmental and business outcomes</p>
+                    </div>
+                </div>
+                
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="diff-content">
+                        <h3>Cultural Localization</h3>
+                        <p>Full Arabic support with RTL design, not just translation—built for Saudi users from day one</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Request Demo -->
+    <section id="contact" class="section contact-section">
+        <div class="contact-container">
+            <div class="section-header">
+                <div class="section-tag" style="color: var(--primary-cyan);">Get Started</div>
+                <h2 class="section-title">Request a Demo</h2>
+                <p class="section-subtitle">Discover how our solutions can transform environmental management for your organization</p>
+            </div>
+            
+            <form class="contact-form" id="demoForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+966 XX XXX XXXX">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="company">Company *</label>
+                        <input type="text" id="company" name="company" required placeholder="Your company name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Job Title *</label>
+                        <input type="text" id="title" name="title" required placeholder="Your job title">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@company.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your environmental management needs..."></textarea>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn-submit">Request Demo Access</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/images/ses-logo.png" alt="SES Logo" class="footer-logo">
+                    <p>Building Saudi Arabia's sustainable future through intelligent environmental management solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#sectors">Sectors</a>
+                    <a href="#impact">Impact</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <a href="#sectors">Environmental Compliance</a>
+                    <a href="#sectors">Waste Management</a>
+                    <a href="#sectors">Circular Economy</a>
+                    <a href="#sectors">Smart City Integration</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@smartenvironmentalsolution.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia</p>
+                    <p><i class="fas fa-flag"></i> Aligned with Vision 2030</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smart Environmental Solutions. All rights reserved. | <a href="#" style="color: var(--primary-cyan);">Privacy Policy</a> | <a href="#" style="color: var(--primary-cyan);">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                title: document.getElementById('title').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send this to your backend
+            console.log('Demo request submitted:', formData);
+            
+            // Show success message
+            alert('Thank you! We will send you the demo link shortly via email.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
+
