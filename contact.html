@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Environmental Solutions</title>
+    <meta name="description" content="Get in touch with Smart Environmental Solutions - Request a demo or contact our team">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/ses-logo.png" alt="SES Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="lang-switcher">العربية</button>
+                <a href="contact.html" class="btn-primary">Request Demo</a>
+            </div>
+            
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Request a demo or contact our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="section-header">
+                        <div class="section-tag">REQUEST A DEMO</div>
+                        <h2 class="section-title">See Our Solutions in Action</h2>
+                        <p class="section-subtitle">Fill out the form and we'll send you a personalized demo link</p>
+                    </div>
+                    
+                    <form id="demoRequestForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+966 50 123 4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name *</label>
+                                <input type="text" id="company" name="company" required placeholder="Your Company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="title">Job Title *</label>
+                            <input type="text" id="title" name="title" required placeholder="Environmental Manager">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sector">Industry Sector *</label>
+                            <select id="sector" name="sector" required>
+                                <option value="">Select your sector</option>
+                                <option value="government">Government & Municipality</option>
+                                <option value="contractor">Contractor & Developer</option>
+                                <option value="service">Service Company</option>
+                                <option value="facility">Waste Management Facility</option>
+                                <option value="recycling">Recycling & Circular Economy</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs and interests..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Request Demo
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Us</h3>
+                        <p>info@smartenvironmentalsolution.com</p>
+                        <a href="mailto:info@smartenvironmentalsolution.com" class="info-link">Send Email</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Visit Us</h3>
+                        <p>Riyadh, Saudi Arabia</p>
+                        <a href="#" class="info-link">Get Directions</a>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-flag"></i></div>
+                        <h3>Vision 2030</h3>
+                        <p>Aligned with Saudi Arabia's sustainable development goals</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Business Hours</h3>
+                        <p>Sunday - Thursday<br>9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section class="map-section">
+        <div id="map" style="width: 100%; height: 400px; background: #e0e0e0; display: flex; align-items: center; justify-content: center;">
+            <p style="color: #666;"><i class="fas fa-map-marked-alt" style="font-size: 3rem;"></i><br>Map integration via CMS</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/images/ses-logo.png" alt="SES Logo" class="footer-logo">
+                    <p>Building Saudi Arabia's sustainable future through intelligent environmental management solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="solutions.html">Solutions</a>
+                    <a href="impact.html">Impact</a>
+                    <a href="media.html">Media</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <a href="solutions.html#government">Government & Municipalities</a>
+                    <a href="solutions.html#contractors">Contractors & Developers</a>
+                    <a href="solutions.html#service-companies">Service Companies</a>
+                    <a href="solutions.html#circular-economy">Circular Economy</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@smartenvironmentalsolution.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia</p>
+                    <p><i class="fas fa-flag"></i> Aligned with Vision 2030</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smart Environmental Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('demoRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const formData = new FormData(this);
+            
+            // Show loading state
+            formMessage.innerHTML = '<p style="color: var(--primary-cyan);"><i class="fas fa-spinner fa-spin"></i> Sending your request...</p>';
+            
+            // Simulate form submission (will be replaced with actual backend)
+            setTimeout(() => {
+                formMessage.innerHTML = '<p style="color: #10b981;"><i class="fas fa-check-circle"></i> Thank you! We\'ll send you a demo link shortly.</p>';
+                this.reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.innerHTML = '';
+                }, 5000);
+            }, 1500);
+            
+            // TODO: Replace with actual backend submission
+            // fetch('/api/demo-request', {
+            //     method: 'POST',
+            //     body: formData
+            // }).then(response => response.json())
+            //   .then(data => { ... });
+        });
+    </script>
+</body>
+</html>
+
